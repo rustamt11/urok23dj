@@ -1,0 +1,14 @@
+{% extends 'Warcraft_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-3 mt-5">
+    {% for i in numbers %}
+    <div class="rounded-3 mb-5  ms-3 d-flex flex-column justify-content-center align-items-center"
+         style="width: 500px; background-color: rgb(57, 57, 57); height: 300px; color: white;">
+        <img src="{% static 'Warcraft_app/img/' %}{{ i }}.png" style="width: 500px; height: 300px;"
+             class="rounded %}" alt="">
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

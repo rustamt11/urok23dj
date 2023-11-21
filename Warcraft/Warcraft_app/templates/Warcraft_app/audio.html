@@ -1,0 +1,39 @@
+{% extends 'Warcraft_app/base.html' %}
+
+
+{% block content %}
+
+<p class="fs-1 ms-3">Музыка</p>
+
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-3 mt-5">
+    {% for audio in audio_list %}
+    {% if audio.category == 'Music' %}
+    <div class="rounded-3 mb-5  ms-3 d-flex flex-column justify-content-center align-items-center"
+         style="width: 450px; background-color: rgb(57, 57, 57); height: 100px; color: white;">
+        <p>
+            <audio controls src="{{audio.audio.url}}"></audio>
+        </p>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+<p class="fs-1 ms-3">Реплики</p>
+
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-3 mt-5">
+    {% for audio in audio_list %}
+    {% if audio.category == 'Replicas' %}
+    <div class="rounded-3 mb-5  ms-3 d-flex flex-column justify-content-center align-items-center"
+         style="width: 450px; background-color: rgb(57, 57, 57); height: 100px; color: white;">
+        <p>
+            <audio controls src="{{audio.audio.url}}"></audio>
+        </p>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+
+{% endblock content %}

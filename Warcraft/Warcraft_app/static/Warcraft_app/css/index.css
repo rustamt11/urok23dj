@@ -1,0 +1,12 @@
+.banner{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    text-align: center;
+    height: 600px;
+}
+
+.banner-container {
+    height: 100%;
+    width: 500px;
+}

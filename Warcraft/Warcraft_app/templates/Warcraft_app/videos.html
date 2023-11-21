@@ -1,0 +1,39 @@
+{% extends 'Warcraft_app/base.html' %}
+
+
+{% block content %}
+
+<p class="fs-1 ms-3">Синематики</p>
+
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-3 mt-5">
+    {% for video in video_list %}
+    {% if video.category == 'Cinematic' %}
+    <div class="rounded-3 mb-5  ms-3 d-flex flex-row justify-content-center align-items-center"
+         style="width: 550px; background-color: rgb(57, 57, 57); height: 500px; color: white;">
+        <p>
+            <video style="width: 500px; height: 500px;" controls src="{{video.video.url}}"></video>
+        </p>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+<p class="fs-1 ms-3">Игровой процесс</p>
+
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-3 mt-5">
+    {% for video in video_list %}
+    {% if video.category == 'GameProcess' %}
+    <div class="rounded-3 mb-5  ms-3 d-flex flex-column justify-content-center align-items-center"
+         style="width: 550px; background-color: rgb(57, 57, 57); height: 500px; color: white;">
+        <p>
+            <video style="width: 500px; height: 500px;" controls src="{{video.video.url}}"></video>
+        </p>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>
+
+
+{% endblock content %}
